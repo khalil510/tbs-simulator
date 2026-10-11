@@ -1,0 +1,30 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.4",
+  "Category": "Simulation",
+  "Description": "Tactical Battlespace Simulator runtime. Loads scenario JSON served by the Django backend and runs the real-time training simulation.",
+  "Modules": [
+    {
+      "Name": "TBS",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "AdditionalDependencies": [
+        "Engine",
+        "AIModule",
+        "HttpFwd"
+      ]
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "CesiumForUnreal",
+      "Enabled": true,
+      "MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/87a11e40fa6a44cb82d1896093a38a84"
+    },
+    {
+      "Name": "Agones",
+      "Enabled": false,
+      "Comment": "Enable for Kubernetes game-server hosting (milestone M4)."
+    }
+  ]
+}

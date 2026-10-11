@@ -1,0 +1,37 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+db.sqlite3
+staticfiles/
+media/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# --- Node / Angular ---
+node_modules/
+frontend/dist/
+.angular/
+npm-debug.log*
+
+# --- Unreal Engine ---
+sim/Binaries/
+sim/Intermediate/
+sim/DerivedDataCache/
+sim/Saved/
+sim/Build/
+*.sln
+*.xcworkspace
+.vs/
+
+# --- Env / secrets ---
+.env
+.env.local
+*.pem
+
+# --- OS / editor ---
+.DS_Store
+.idea/
+.vscode/

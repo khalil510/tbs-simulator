@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tbs.local/schemas/aar-event.schema.json",
+  "title": "TBS AAR Event",
+  "description": "One telemetry/event record emitted by the UE5 dedicated server during a session.",
+  "type": "object",
+  "required": ["t", "entity_id", "kind"],
+  "properties": {
+    "t": { "type": "number", "description": "Seconds since session start (monotonic)" },
+    "entity_id": { "type": "string" },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "position", "waypoint-reached", "shot-fired", "hit", "kill",
+        "downed", "revived", "objective-progress", "objective-complete",
+        "instructor-injection", "session-state"
+      ]
+    },
+    "position": {
+      "type": "object",
+      "properties": {
+        "lat": { "type": "number" },
+        "lon": { "type": "number" },
+        "alt": { "type": "number" },
+        "headingDeg": { "type": "number" }
+      }
+    },
+    "payload": { "type": "object" }
+  }
+}
